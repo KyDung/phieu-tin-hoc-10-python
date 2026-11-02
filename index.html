@@ -57,6 +57,30 @@
   button.btn.alt { background:var(--card); color:var(--text); border:1px solid var(--line); }
   #result { font-weight:700; }
   a { color:var(--accent); }
+  img, video { height:auto; }
+  .code { overflow-x:auto; white-space:pre-wrap; word-break:break-word; }
+  .tabs { overflow-x:auto; flex-wrap:nowrap; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:4px; }
+  .tab { white-space:nowrap; flex:0 0 auto; min-height:40px; }
+  .opt { min-height:44px; }
+  .opt input { width:20px; height:20px; flex:0 0 auto; }
+  @media (max-width:900px) { .row { grid-template-columns:1fr; } }
+  @media (max-width:720px) {
+    body { font-size:14px; }
+    header { position:static; }
+    .head { padding:10px 0; }
+    .profile { width:100%; }
+    .profile #studentName { flex:1; width:auto; } .profile #studentClass { width:90px; }
+    main { padding:14px 12px 40px; }
+    .wrap { padding:0 12px; }
+    .card { padding:14px; border-radius:12px; }
+    h1 { font-size:16px; }
+    .blank { width:100%; max-width:100%; margin-top:4px; }
+    .actions { flex-direction:column; align-items:stretch; }
+    button.btn { width:100%; padding:12px 16px; }
+    #result { text-align:center; }
+  }
+  /* 16px inputs stop iOS Safari zooming on focus */
+  @media (max-width:720px) { textarea, input[type=text] { font-size:16px; } }
   @media print { header, .tabs, .actions, .notice { display:none; } .panel[hidden] { display:block; } body { background:#fff; color:#000; } .card { break-inside:avoid; } video { display:none; } }
 </style>
 </head>
